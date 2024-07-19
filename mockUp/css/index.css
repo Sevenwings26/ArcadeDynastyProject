@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  
+  /*--------
+  hamburger
+  -------- */
+  .hamburger-menu-wrapper {
+    display: none;
+    width: 80%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.96);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  
+  .hamburger-menu-wrapper.active {
+    display: block;
+    transform: translateX(0);
+  }
+  
+  .hamburger-menu-logo a {
+    background-color: #000;
+    padding: 1.1rem 0;
+  }
+
+  .hamburger-menu-logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .hamburger-menu-wrapper .menu-link ul {
+    display: block;
+    text-align: center;
+  }
+  
+  .hamburger-menu-wrapper .menu-link ul li {
+    list-style: none;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .hamburger-menu-wrapper .menu-link ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  .header-top-right-social {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .header-top-right-social a {
+    color: white;
+    margin: 0 10px;
+  }
+  
+  /* Navigation bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    height: 3rem;
+    background-color: black;
+  }
+  
+  .brand-logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+/*   
+  .menu-link {
+    display: none;
+  } */
+  
+  .hamburger-container { 
+    border: 1px solid white;
+  }
+  .hamburger-container i {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  .hamburger-container .toggle {
+    color: #fff;
+  }
+
+  .menu-link ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .menu-link ul li {
+    list-style: none;
+    margin-left: 2rem;
+  }
+  
+  .menu-link ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+
+  /* hero section */
+  .hero {
+    background-image: linear-gradient(30deg, rgba(60, 58, 49, 0.6),rgba(100, 80, 14, 0.6),rgb(188, 182, 149)), url("../img/fashion-show-1746604_1920.jpg");
+    background-size: contain;
+    /* height: 600px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    min-height: 20rem;
+    background-repeat: no-repeat;
+  }
+
+  .hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+  }
+
+  .hero-content {
+    text-align: center;
+    color: #fff;
+  }
+
+  .hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
+
+  .hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+  }
+
+  .book-ticket {
+    background-color: #f0f0f0;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: backgroind-color 0.2s ease-in-out;
+  }
+
+  .book-ticket:hover{
+    background-color: #ddd;
+  }
+
+  @media screen and (min-width: 768px) {
+    .hamburger-container,
+    .hamburger-menu-wrapper {
+      display: none;
+    }
+    .menu-link {
+      display: block;
+    }
+    .container {
+        padding: 0rem 1.5rem;
+    }
+    .hero {
+        background-size: contain;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hamburger-container {
+      display: block;
+    }
+
+    .navbar .menu-link {
+        display: none;
+    }
+  
+    .hamburger-menu-wrapper.active {
+      display: block;
+    }
+
+    .container {
+        padding: 0rem 1rem;
+    }
+
+    .hero{
+        background-size: contain;
+        min-height: 26rem;
+    }
+  }
+  
