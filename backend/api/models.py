@@ -18,6 +18,14 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+class CarouselImages(models.Model):
+    title = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='carousel_images/')
+
+    def __str__(self):
+        return f'{self.title} in Carousel.'
+
+
 class Event(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
