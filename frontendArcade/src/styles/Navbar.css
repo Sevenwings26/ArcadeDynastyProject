@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
 .login-signup-link {
     border: 0.1px solid black;
     border-radius: 50px;
@@ -14,4 +17,50 @@
     border: 1px solid black;
   }
    */
+
+
+/* Raw CSS */
+.arcade-display {
+  margin: auto;
+  width: 60%;
+  height: 1000px;
+  border-radius: 20px;
+  background-image: url('../images/ArcadeComponent.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  /* @apply sm:w-full sm:h-64; */
+}
+
+.arcade-display-absolute {
+  position: absolute;
+  width: 12rem;
+  height: 4rem;
+  top: 23rem;
+  right: 6rem;
+}
+
+.arcade-display-absolute-bg {
+  width: 11rem;
+  height: 3.5rem;
+  background-color: #D4D5CF;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* @apply sm:w-32 sm:h-10; */
+}
+
+.arcade-display-absolute-border {
+  width: 11rem;
+  height: 3.5rem;
+  border: 5px solid #B0AB8C;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: transparent;
+  position: absolute;
+  /* @apply sm:w-32 sm:h-10 sm:top-1 sm:right-1; */
+}
+
 

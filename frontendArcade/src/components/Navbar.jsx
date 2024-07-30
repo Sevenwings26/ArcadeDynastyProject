@@ -5,9 +5,14 @@ import "../styles/Navbar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleDropdownToggle = () => {
+    setDropdownOpen(!dropdownOpen);
   };
 
   return (
@@ -47,48 +52,72 @@ const Navbar = () => {
         >
           <ul className="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
             <li>
-              <Link
-                className="md:p-3 py-2 m-2 block hover:text-purple-400"
-                to="/"
-              >
+              <Link className="md:p-3 py-2 m-2 block hover:text-gray-400" to="/">
                 Home
               </Link>
             </li>
             <li>
-              <Link
-                className="md:p-3 py-2 m-2 block hover:text-purple-400"
-                to="/Blog"
-              >
+              <Link className="md:p-3 py-2 m-2 block hover:text-gray-400" to="/Blog">
                 Blog
               </Link>
             </li>
-            <li>
-              <Link
-                className="md:p-3 py-2 m-2 block hover:text-purple-400"
-                to="/Gallery"
+            <li className="relative">
+              <button
+                className="md:p-3 py-2 m-2 block hover:text-gray-400 focus:outline-none"
+                onClick={handleDropdownToggle}
               >
-                Gallery
-              </Link>
+                Gallery <span>🔽</span>
+              </button>
+              {dropdownOpen && (
+                <ul className="absolute bg-white shadow-md rounded-lg mt-2">
+                  <li>
+                    <Link
+                      className="block px-4 py-2 hover:bg-gray-100"
+                      to="/Gallery/Event1"
+                    >
+                      Arcade Fashion Week
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="block px-4 py-2 hover:bg-gray-100"
+                      to="/Gallery/Event2"
+                    >
+                      Event 2
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="block px-4 py-2 hover:bg-gray-100"
+                      to="/Gallery/Event3"
+                    >
+                      Event 3
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="block px-4 py-2 hover:bg-gray-100"
+                      to="/Gallery/Event4"
+                    >
+                      Event 4
+                    </Link>
+                  </li>
+                </ul>
+              )}
             </li>
             <li>
-              <Link
-                className="md:p-3 py-2 m-2 block hover:text-purple-400"
-                to="/about"
-              >
+              <Link className="md:p-3 py-2 m-2 block hover:text-gray-400" to="/about">
                 About
               </Link>
             </li>
             <li>
-              <Link
-                className="md:p-3 py-2 m-2 block hover:text-purple-400"
-                to="/Designs"
-              >
+              <Link className="md:p-3 py-2 m-2 block hover:text-gray-400" to="/Designs">
                 Designs
               </Link>
             </li>
             <li>
               <Link
-                className="md:p-3 py-2 m-2 block hover:text-purple-400 login-signup-link"
+                className="md:p-3 py-2 m-2 block hover:text-gray-400"
                 to="/login"
               >
                 Login
@@ -96,7 +125,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                className="md:p-3 py-2 m-2 block hover:text-purple-400 login-signup-link"
+                className="md:p-3 py-2 m-2 block hover:text-gray-400"
                 to="/signup"
               >
                 Sign Up
@@ -110,3 +139,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
